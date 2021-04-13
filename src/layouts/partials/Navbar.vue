@@ -1,12 +1,11 @@
 <template>
   <div class="fixed inset-0 h-16 bg-black">
-    <nav
-    class="container flex flex-wrap items-center justify-between px-4 py-4 mx-auto transition-all sm:px-0 transition-500"
+    <nav class="container flex flex-wrap items-center justify-between py-4 mx-auto transition-all sm:px-0 transition-500"
     v-bind:class="{
       'opacity-100': !disableScroll && scrollPosition > headerHeight,
-      'opacity-0': !disableScroll && scrollPosition < headerHeight
-    }">
+      'opacity-0': !disableScroll && scrollPosition < headerHeight }">
       <div class="flex items-center flex-grow block w-auto">
+
         <div class="flex items-center flex-shrink-0 mr-6 text-white">
           <font-awesome :icon="['fas', 'ghost']" class="mr-3"></font-awesome>
           <span class="text-xl font-semibold tracking-tight">{{ $static.metadata.siteName }}</span>
@@ -24,8 +23,7 @@
                 v-if="element.external"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="animated-link"
-              >{{ element.name }}</a>
+                class="animated-link">{{ element.name }}</a>
               <g-link v-else :to="element.link" class="animated-link">{{element.name}}</g-link>
             </li>
           </ul>
@@ -39,8 +37,7 @@
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
               class="hidden hover:text-white sm:block"
-              v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}"
-            >
+              v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}">
               <span class="text-sm">
                 <a :href="element.link" target="_blank" rel="noopener noreferrer">
                   <font-awesome :icon="['fab', element.icon]" />
