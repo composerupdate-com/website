@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Casper',
-  siteDescription: 'an awesome Gridsome starter kit',
+  siteName: 'Composer Update',
+  siteDescription: 'Dicas e Truques para Desenvolvedores Laravel',
   siteUrl: 'http://localhost:8080',
   plugins: [
     {
@@ -23,20 +23,20 @@ module.exports = {
         shouldTimeTravel: true,
         shouldPurgeUnusedKeyframes: true,
       }
-    }, 
+    },
     {
       use: 'gridsome-source-static-meta',
       options: {
         path: 'content/site/*.json'
       }
-    }, 
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Author',
         path: './content/author/*.md'
       }
-    }, 
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {

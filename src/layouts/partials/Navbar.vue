@@ -1,25 +1,24 @@
 <template>
   <div class="fixed inset-0 h-16 bg-black">
-    <nav 
-    class="flex items-center justify-between flex-wrap container mx-auto px-4 sm:px-0 py-4 transition-all transition-500" 
+    <nav
+    class="container flex flex-wrap items-center justify-between px-4 py-4 mx-auto transition-all sm:px-0 transition-500"
     v-bind:class="{
-      'opacity-100': !disableScroll && scrollPosition > headerHeight, 
+      'opacity-100': !disableScroll && scrollPosition > headerHeight,
       'opacity-0': !disableScroll && scrollPosition < headerHeight
     }">
-      <div class="block flex-grow flex items-center w-auto">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <div class="flex items-center flex-grow block w-auto">
+        <div class="flex items-center flex-shrink-0 mr-6 text-white">
           <font-awesome :icon="['fas', 'ghost']" class="mr-3"></font-awesome>
-          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteName }}</span>
+          <span class="text-xl font-semibold tracking-tight">{{ $static.metadata.siteName }}</span>
         </div>
-        <div class="text-sm flex-grow uppercase">
-          <ul 
-          class="list-none flex justify-left text-gray-300 uppercase transition-all transition-500">
+        <div class="flex-grow text-sm uppercase">
+          <ul
+          class="flex text-gray-300 uppercase list-none transition-all justify-left transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
               class="hover:text-white"
-              v-bind:class="{'mr-4' : index != Object.keys($static.metadata.navigation).length - 1}"
-            >
+              v-bind:class="{'mr-4' : index != Object.keys($static.metadata.navigation).length - 1}">
               <a
                 :href="element.link"
                 v-if="element.external"
@@ -31,16 +30,15 @@
             </li>
           </ul>
         </div>
-        
         <div class="inline-block text-gray-400">
-          <ul class="list-none flex justify-center md:justify-end">
+          <ul class="flex justify-center list-none md:justify-end">
             <li class="mr-0 sm:mr-6">
               <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white hidden sm:block"
+              class="hidden hover:text-white sm:block"
               v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}"
             >
               <span class="text-sm">
@@ -58,14 +56,6 @@
 </template>
 
 <script>
-/*
- * I'm a lazy guy, so i used this script
- * https://codepen.io/ninaregli/pen/OjeMLP
- * to calculate the current scroll position
- *
- * Will be used to add/remove the additional
- * css classes to show the sticky navbar
- */
 
 import ThemeSwitcher from '~/components/ThemeSwitcher'
 
