@@ -1,0 +1,14 @@
+{
+    "name": "Gridsome Starter",
+    "extensions": [
+        "visualstudioexptteam.vscodeintellicode"
+    ],
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "files.exclude": {
+            "**/CODE_OF_CONDUCT.md": true,
+            "**/LICENSE": true
+        }
+    },
+    "postCreateCommand": "bash ./.devcontainer/install-dev-tools.sh"
+}
