@@ -56,7 +56,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    lineClamp: ['responsive', 'hover']
+  },
   plugins: [
     function ({
       addComponents
@@ -150,7 +152,10 @@ module.exports = {
       })
     },
     require('tailwindcss-tables')(),
+    require('@tailwindcss/forms'),
     require('tailwindcss-gradients'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography')
   ]
 }
