@@ -12,14 +12,6 @@ pre {
   @apply border-l border-l-2 border-l-gray-500 pl-4 mt-4 text-base break-words overflow-x-auto;
 }
 
-ol {
-  @apply list-decimal ml-5;
-}
-
-ul {
-  @apply list-disc ml-5;
-}
-
 :not(pre)>code {
   @apply text-red-600 text-base;
 }

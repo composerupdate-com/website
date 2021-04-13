@@ -1,79 +1,106 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24">
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8">
-        <section class="post-header container mx-auto px-0 mb-4 border-b">
-          <span class="text-blue-500 font-medium uppercase tracking-wide text-sm">
-            <g-link
-              :to="$page.blog.category.path"
-              class="hover:underline"
-            >{{ $page.blog.category.title }}</g-link>
+    <div class="container pt-24 mx-auto overflow-x-hidden sm:pxi-0">
+      <div class="pt-8 mx-4 lg:mx-32 md:mx-16 sm:mx-8">
+        <section class="container px-0 mx-auto mb-4 border-b post-header">
+          <span
+            class="text-sm font-medium tracking-wide text-blue-500 uppercase"
+          >
+            <g-link :to="$page.blog.category.path" class="hover:underline">
+              {{ $page.blog.category.title }}
+            </g-link>
           </span>
-          <h1 class="text-5xl font-medium leading-none mt-0">{{ $page.blog.title}}</h1>
-          <div class="text-2xl pt-4 pb-10 text-gray-700 font-serif" v-html="$page.blog.excerpt"></div>
+          <h1 class="mt-0 text-5xl font-medium leading-none">
+            {{ $page.blog.title }}
+          </h1>
+          <div
+            class="pt-4 pb-10 font-serif text-2xl text-gray-700"
+            v-html="$page.blog.excerpt"
+          ></div>
         </section>
-        <section class="post-author-list mb-10 mx-0">
+        <section class="mx-0 mb-10 post-author-list">
           <div class="flex items-center">
-            <div class="flex justify-between items-center">
-              <ul class="list-none flex author-list">
-                <li v-for="author in $page.blog.author" :key="author.id" class="author-list-item">
+            <div class="flex items-center justify-between">
+              <ul class="flex list-none author-list">
+                <li
+                  v-for="author in $page.blog.author"
+                  :key="author.id"
+                  class="author-list-item"
+                >
                   <g-link :to="author.path" v-tooltip="author.name">
                     <g-image
                       :src="author.image"
                       :alt="author.name"
-                      class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gray-200 border-2 border-white"
+                      class="w-8 h-8 bg-gray-200 border-2 border-white rounded-full sm:h-10 sm:w-10"
                     />
                   </g-link>
                 </li>
               </ul>
             </div>
-            <div class="pl-3 flex flex-col text-xs leading-none uppercase">
+            <div class="flex flex-col pl-3 text-xs leading-none uppercase">
               <p>
-                <span v-for="(author, index) in $page.blog.author" :key="author.id">
+                <span
+                  v-for="(author, index) in $page.blog.author"
+                  :key="author.id">
                   <g-link
                     :to="author.path"
                     v-tooltip="author.name"
                     class="hover:underline"
-                  >{{ author.name }}</g-link>
-                  <span v-if="index < $page.blog.author.length-1">,</span>
+                    >{{ author.name }}</g-link>
+                  <span v-if="index < $page.blog.author.length - 1">,</span>
                 </span>
               </p>
               <p class="text-gray-700">
-                <time :datetime="$page.blog.datetime">{{ $page.blog.humanTime }}</time>
+                <time :datetime="$page.blog.datetime">{{
+                  $page.blog.humanTime
+                }}</time>
                 &nbsp;&middot;&nbsp; {{ $page.blog.timeToRead }} min read
               </p>
             </div>
           </div>
         </section>
       </div>
-      <section class="post-image mx-auto w-full">
+
+      <section class="w-full mx-auto post-image">
         <g-image :src="$page.blog.image"></g-image>
       </section>
 
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
-        <section class="post-content container mx-auto relative font-serif text-gray-700">
-          <div class="post-content-text text-xl" v-html="$page.blog.content"></div>
+      <div class="px-4 lg:mx-32 md:mx-16 sm:px-0">
+
+        <section class="container relative mx-auto text-gray-700">
+          <article class="text-xl prose lg:prose-lg" v-html="$page.blog.content"></article>
         </section>
 
-        <section class="post-tags container mx-auto relative py-10">
+        <section class="container relative py-10 mx-auto post-tags">
           <g-link
             v-for="tag in $page.blog.tags"
             :key="tag.id"
             :to="tag.path"
-            class="text-xs bg-transparent hover:text-blue-700 py-2 px-4 mr-2 border hover:border-blue-500 border-gray-600 text-gray-700 rounded-full"
-          >{{ tag.title }}</g-link>
+            class="px-4 py-2 mr-2 text-xs text-gray-700 bg-transparent border border-gray-600 rounded-full hover:text-blue-700 hover:border-blue-500"
+          >
+            {{ tag.title }}
+          </g-link>
         </section>
       </div>
     </div>
 
-    <section class="post-related bg-black text-gray-200 pt-10 border-b border-b-gray-900">
+    <section class="pt-10 text-gray-200 bg-black border-b post-related border-b-gray-900">
       <div class="container mx-auto">
         <div class="flex flex-wrap pt-8 pb-8 mx-4 sm:-mx-4">
-          <PostListItem v-if="$page.previous" :record="$page.previous" :border=false></PostListItem>
-          <PostListItem v-if="$page.next" :record="$page.next" :border=false></PostListItem>
+          <PostListItem
+            v-if="$page.previous"
+            :record="$page.previous"
+            :border="false"
+          ></PostListItem>
+          <PostListItem
+            v-if="$page.next"
+            :record="$page.next"
+            :border="false"
+          ></PostListItem>
         </div>
       </div>
     </section>
+
   </Layout>
 </template>
 
@@ -158,9 +185,6 @@
         path
       }
     }
-
-
-    
   }
 </page-query>
 
@@ -169,13 +193,12 @@ import PostListItem from "~/components/PostListItem.vue";
 
 export default {
   components: {
-    PostListItem
+    PostListItem,
   },
   metaInfo() {
     return {
-      title: this.$page.blog.title
+      title: this.$page.blog.title,
     };
-  }
-  
+  },
 };
 </script>

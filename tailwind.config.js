@@ -1,8 +1,9 @@
-//tailwind border color plugin powered by
-//https://github.com/tailwindcss/tailwindcss/pull/560#issuecomment-503222143
-var _ = require('lodash')
-var flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
 
+var _ = require('lodash')
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+var flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
 
 module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
@@ -34,7 +35,11 @@ module.exports = {
     corePlugins: {
       container: false
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
     radialGradients: {
       shapes: { // defaults to this value
         'default': 'ellipse',
@@ -109,48 +114,43 @@ module.exports = {
         'h1': {
           fontSize: config('theme.fontSize.5xl'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
         'h2': {
           fontSize: config('theme.fontSize.4xl'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
         'h3': {
           fontSize: config('theme.fontSize.3xl'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
         'h4': {
           fontSize: config('theme.fontSize.2xl'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
         'h5': {
           fontSize: config('theme.fontSize.xl'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
         'h6': {
           fontSize: config('theme.fontSize.lg'),
           fontWeight: config('theme.fontWeight.bold'),
-          fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
           marginBottom: config('theme.margin.4')
         },
       })
     },
     require('tailwindcss-tables')(),
-    require('tailwindcss-gradients')
+    require('tailwindcss-gradients'),
+    require('@tailwindcss/typography')
   ]
 }
