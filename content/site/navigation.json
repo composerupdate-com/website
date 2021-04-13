@@ -1,28 +1,33 @@
 {
   "headerNavigation": [
     {
-      "name": "Home",
+      "name": "Início",
       "link": "/",
       "external": false
     },
     {
-      "name": "About",
-      "link": "/about",
+      "name": "Sobre",
+      "link": "/sobre",
       "external": false
     },
     {
-      "name": "Getting started",
-      "link": "/category/getting-started",
+      "name": "Laravel",
+      "link": "/category/laravel",
+      "external": false
+    },
+    {
+      "name": "VSCode",
+      "link": "/category/vscode",
       "external": false
     }
   ],
   "footerNavigation": [{
-      "name": "Latest Posts",
+      "name": "Blog",
       "link": "/",
       "external" : false
     },
     {
-      "name": "Facebook",
+      "name": "Github",
       "link": "https://www.facebook.com",
       "external": true
     },

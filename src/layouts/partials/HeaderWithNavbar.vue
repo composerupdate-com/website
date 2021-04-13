@@ -44,8 +44,8 @@
     <div class="container pt-0 pb-16 mx-auto text-white logo md:pb-32 md:pt-16">
 
       <h2 class="flex content-center m-0 space-x-2 space-y-4 text-5xl">
-        <g-image src="/favicon-96x96.png" class="w-12 h-12" />
-        <span class="text-white ">{{ $static.metadata.siteName }}</span>
+        <g-image src="/favicon-96x96.png" class="self-center block object-contain w-16 h-auto" />
+        <span class="self-center block text-white">{{ $static.metadata.siteName }}</span>
       </h2>
 
       <div class="text-xl font-thin text-gray-400">{{ $static.metadata.siteDescription }}</div>

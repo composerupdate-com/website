@@ -54,6 +54,21 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'LaravelPackage',
+        path: 'content/laravel-packages/*.md',
+        route: '/laravel-packages/:slug',
+        refs: {
+          author: 'Author',
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
+      }
     }
   ],
   transformers: {
@@ -71,6 +86,9 @@ module.exports = {
   templates: {
     Blog: [{
       path: '/blog/:title'
+    }],
+    LaravelPackage: [{
+      path: '/laravel-packages/:title'
     }],
     Category: [{
       path: '/category/:title',

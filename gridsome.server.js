@@ -6,6 +6,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
+
   api.loadSource(({
     addCollection
   }) => {
@@ -27,13 +28,23 @@ module.exports = function (api) {
         ...options
       };
     }
+    if (options.internal.typeName === 'LaravelPackage') {
+
+      options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
+      options.author = (typeof options.author === 'string') ? options.author.split(',').map(string => string.trim()) : options.author;
+      return {
+        ...options
+      };
+    }
   })
 
   api.createPages(async ({
     graphql,
     createPage
   }) => {
+
     // Use the Pages API here: https://gridsome.org/docs/pages-api
+
     const {
       data
     } = await graphql(`{
@@ -68,4 +79,5 @@ module.exports = function (api) {
     });
 
   });
+
 }
