@@ -11,7 +11,7 @@ RUN sudo apt-get install -y \
         git \
         gnupg2 \
         jq \
-        sudo
+        python3
 
 WORKDIR /home
 
