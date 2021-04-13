@@ -1,11 +1,10 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
+
     <div class="container pt-24 mx-auto overflow-x-hidden sm:pxi-0">
       <div class="pt-8 mx-4 lg:mx-32 md:mx-16 sm:mx-8">
         <section class="container px-0 mx-auto mb-4 border-b post-header">
-          <span
-            class="text-sm font-medium tracking-wide text-blue-500 uppercase"
-          >
+          <span class="text-sm font-medium tracking-wide text-blue-500 uppercase">
             <g-link :to="$page.blog.category.path" class="hover:underline">
               {{ $page.blog.category.title }}
             </g-link>
@@ -13,48 +12,27 @@
           <h1 class="mt-0 text-5xl font-medium leading-none">
             {{ $page.blog.title }}
           </h1>
-          <div
-            class="pt-4 pb-10 font-serif text-2xl text-gray-700"
-            v-html="$page.blog.excerpt"
-          ></div>
+          <div class="pt-4 pb-10 font-serif text-2xl text-gray-500" v-html="$page.blog.excerpt"></div>
         </section>
         <section class="mx-0 mb-10 post-author-list">
           <div class="flex items-center">
             <div class="flex items-center justify-between">
               <ul class="flex list-none author-list">
-                <li
-                  v-for="author in $page.blog.author"
-                  :key="author.id"
-                  class="author-list-item"
-                >
+                <li v-for="author in $page.blog.author" :key="author.id" class="author-list-item">
                   <g-link :to="author.path" v-tooltip="author.name">
-                    <g-image
-                      :src="author.image"
-                      :alt="author.name"
-                      class="w-8 h-8 bg-gray-200 border-2 border-white rounded-full sm:h-10 sm:w-10"
-                    />
+                    <g-image :src="author.image" :alt="author.name" class="w-8 h-8 bg-gray-200 border-2 border-white rounded-full sm:h-10 sm:w-10" />
                   </g-link>
                 </li>
               </ul>
             </div>
             <div class="flex flex-col pl-3 text-xs leading-none uppercase">
               <p>
-                <span
-                  v-for="(author, index) in $page.blog.author"
-                  :key="author.id">
-                  <g-link
-                    :to="author.path"
-                    v-tooltip="author.name"
-                    class="hover:underline"
-                    >{{ author.name }}</g-link>
+                <span v-for="(author, index) in $page.blog.author" :key="author.id">
+                  <g-link :to="author.path" v-tooltip="author.name" class="hover:underline">
+                    {{ author.name }}
+                  </g-link>
                   <span v-if="index < $page.blog.author.length - 1">,</span>
                 </span>
-              </p>
-              <p class="text-gray-700">
-                <time :datetime="$page.blog.datetime">{{
-                  $page.blog.humanTime
-                }}</time>
-                &nbsp;&middot;&nbsp; {{ $page.blog.timeToRead }} min read
               </p>
             </div>
           </div>
@@ -68,35 +46,25 @@
       <div class="px-4 lg:mx-32 md:mx-16 sm:px-0">
 
         <section class="container relative mx-auto text-gray-700">
-          <article class="text-xl prose lg:prose-lg" v-html="$page.blog.content"></article>
+          <article class="py-12 text-xl prose lg:prose-lg" v-html="$page.blog.content"></article>
         </section>
 
         <section class="container relative py-10 mx-auto post-tags">
-          <g-link
-            v-for="tag in $page.blog.tags"
-            :key="tag.id"
-            :to="tag.path"
-            class="px-4 py-2 mr-2 text-xs text-gray-700 bg-transparent border border-gray-600 rounded-full hover:text-blue-700 hover:border-blue-500"
-          >
+          <g-link v-for="tag in $page.blog.tags" :key="tag.id" :to="tag.path"
+            class="px-4 py-2 mr-2 text-xs text-gray-700 bg-transparent border border-gray-600 rounded-full hover:text-blue-700 hover:border-blue-500">
             {{ tag.title }}
           </g-link>
         </section>
+
       </div>
+
     </div>
 
     <section class="pt-10 text-gray-200 bg-black border-b post-related border-b-gray-900">
       <div class="container mx-auto">
         <div class="flex flex-wrap pt-8 pb-8 mx-4 sm:-mx-4">
-          <PostListItem
-            v-if="$page.previous"
-            :record="$page.previous"
-            :border="false"
-          ></PostListItem>
-          <PostListItem
-            v-if="$page.next"
-            :record="$page.next"
-            :border="false"
-          ></PostListItem>
+          <PostListItem v-if="$page.previous" :record="$page.previous" :border="false"></PostListItem>
+          <PostListItem v-if="$page.next" :record="$page.next" :border="false"></PostListItem>
         </div>
       </div>
     </section>

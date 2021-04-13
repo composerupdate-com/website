@@ -1,10 +1,8 @@
 <template>
-  <a role="button" @click.prevent="toggleTheme()"  
-      :aria-label="'Toggle ' + nextTheme" 
+  <a role="button" @click.prevent="toggleTheme()"
+      :aria-label="'Toggle ' + nextTheme"
       :title="'Toggle ' + nextTheme"
-      class="toggle-theme"
-    >
-    
+      class="toggle-theme">
     <font-awesome :icon="['fas', 'sun']" class="mr-3" v-if="theme === 'dark'"></font-awesome>
     <font-awesome :icon="['fas', 'moon']" class="mr-3" v-if="theme === 'light'"></font-awesome>
   </a>
