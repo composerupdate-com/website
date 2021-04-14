@@ -1,5 +1,5 @@
 ---
-title: Dederis faciem
+title: Dicas e Truqes para Composer
 slug: page2
 tags: tag1, tag2, tag3
 category: Getting started

@@ -1,9 +1,9 @@
 ---
 title: Como instalar o PHP 8, MySQL e Laravel no Debian 10
-slug: page9
+slug: como-instalar-php8-mysql8-laravel-debian-10
 tags: php8, mysql, laravel
 category: Laravel
-excerpt: Saepe Horamque Typhoea in denique, vivere semina manu quodque hic quia et iam natis. Vincere ferociaarva.
+excerpt: Passo a Passo para instalar o PHP 8, MySQL 8 e Laravel no Debian 10
 created: 2021-04-14
 image: ./images/pexels-pixabay-270348.jpg
 image_caption: Como instalar o PHP 8, MySQL e Laravel no Debian 10
