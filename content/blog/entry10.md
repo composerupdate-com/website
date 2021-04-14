@@ -1,5 +1,6 @@
 ---
 title: Iter vultus quidem pariter caligine inane hanc
+slug: page10
 tags: tag3, tag4, tag5
 category: Business
 excerpt: Canache virago, metuendus illo est sibi inlaesos, ubi prior loca coniuge, illi pro. Vincere ferociaarva.

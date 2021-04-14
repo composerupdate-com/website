@@ -1,5 +1,6 @@
 ---
 title: Aera exspatiantur impete inplumes plebe capillos est
+slug: page11
 tags: tag5, tag6, tag7
 category: Digital
 excerpt: Est ille semper crimen inanes uterque sternitur Syrtis, est. Vincere ferociaarva.

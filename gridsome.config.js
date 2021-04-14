@@ -70,7 +70,7 @@ module.exports = {
   },
   templates: {
     Blog: [{
-      path: '/blog/:title'
+      path: '/blog/:slug'
     }],
     Category: [{
       path: '/category/:title',

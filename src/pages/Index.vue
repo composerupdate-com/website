@@ -21,6 +21,7 @@ query($page:Int) {
     edges {
       node {
         title
+        slug
         excerpt
         image(width:800)
         path

@@ -49,6 +49,7 @@
           node {
             ... on Blog {
               title
+              slug
               excerpt
               image(width:800)
               path
@@ -69,7 +70,7 @@
           }
         }
       }
-    }  
+    }
   }
 </page-query>
 

@@ -1,5 +1,6 @@
 ---
 title: Como instalar o PHP 8, MySQL e Laravel no Debian 10
+slug: page9
 tags: php8, mysql, laravel
 category: Laravel
 excerpt: Saepe Horamque Typhoea in denique, vivere semina manu quodque hic quia et iam natis. Vincere ferociaarva.

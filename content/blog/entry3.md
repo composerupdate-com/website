@@ -1,5 +1,6 @@
 ---
 title: Et aequora inanes fortuna non dextra
+slug: page3
 tags: tag2, tag3
 category: Digital
 excerpt: Lorem markdownum Hesperus in publica iusta aeternus num removit ille. Vincere ferociaarva.

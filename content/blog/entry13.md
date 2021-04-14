@@ -1,5 +1,6 @@
 ---
 title: Styles
+slug: page13
 tags: tag1, tag2
 category: Design
 excerpt: Anxius nec ibimus utque illa circa video est fuit labores alas. Vincere ferociaarva.

@@ -1,5 +1,6 @@
 ---
 title: Monendo decimo referunt supremum
+slug: page6
 tags: tag5, tag6
 category: Digital
 excerpt: Mariti Panthoides este, sequuntur iusserat silva et non puerum. Venit vox peto! Vincere ferociaarva.

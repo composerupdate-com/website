@@ -1,5 +1,6 @@
 ---
 title: Suos novi data gente edaci custodia canes
+slug: page7
 tags: tag6, tag7, tag8
 category: Digital
 excerpt: Lorem markdownum ipso iam capillis aether ceperat castra ille pectus. Vincere ferociaarva.

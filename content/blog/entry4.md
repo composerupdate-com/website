@@ -1,5 +1,6 @@
 ---
 title: Cum est bis
+slug: page4
 tags: tag2, tag3, tag4
 category: Getting started
 excerpt: Lorem markdownum mihi est crinem zonam velum moriens plena nubila folio inde magis secrevit.
