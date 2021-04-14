@@ -76,6 +76,7 @@
   query($id: ID!, $previousElement: ID!, $nextElement: ID!) {
     blog(id: $id) {
       title
+      slug
       path
       image(width:1600, height:800)
       image_caption
@@ -120,6 +121,7 @@
 
     previous: blog(id: $previousElement) {
       title
+      slug
       excerpt
       image(width:800)
       path
@@ -138,6 +140,7 @@
 
     next: blog(id: $nextElement) {
       title
+      slug
       excerpt
       image(width:800)
       path

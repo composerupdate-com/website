@@ -5,12 +5,10 @@ tags: php8, mysql, laravel
 category: Laravel
 excerpt: Saepe Horamque Typhoea in denique, vivere semina manu quodque hic quia et iam natis. Vincere ferociaarva.
 created: 2021-04-14
-image: ./images/sergio-souza-mvb51ThjvRA-unsplash.jpg
-image_caption: Photo by Sergio Souza on Unsplash
+image: ./images/pexels-pixabay-270348.jpg
+image_caption: Como instalar o PHP 8, MySQL e Laravel no Debian 10
 author: luizeof
 ---
-
-## Aoniis possis quae suspiria
 
 Lorem markdownum minari rupes et opem imagine calathosque elisarum prodesse sua
 boves? Abest Phrygum Aetne: incandescit tenet, animos reiectura culpa praecipue

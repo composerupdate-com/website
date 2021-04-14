@@ -50,6 +50,7 @@ module.exports = function (api) {
           }
           node {
             id
+            slug
             path
           }
         }
