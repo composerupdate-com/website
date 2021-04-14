@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden">
-      <div class="flex flex-wrap with-large pt-16 pb-16 mx-4 sm:-mx-4">
+    <div class="container mx-auto overflow-x-hidden sm:pxi-0">
+      <div class="flex flex-wrap pt-16 pb-16 mx-4 with-large sm:-mx-4">
         <PostListItem v-for="edge in $page.entries.edges" :key="edge.node.id" :record="edge.node" />
       </div>
     </div>
@@ -50,7 +50,7 @@ import PostListItem from '~/components/PostListItem.vue';
 
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Bem Vindo"
   },
   components: {
     PostListItem

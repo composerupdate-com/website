@@ -1,8 +1,9 @@
 {
     "name": "Gridsome Starter",
     "extensions": [
-        "visualstudioexptteam.vscodeintellicode"
-    ],
+		"visualstudioexptteam.vscodeintellicode",
+		"octref.vetur"
+	],
     "dockerFile": "Dockerfile",
     "settings": {
         "files.exclude": {

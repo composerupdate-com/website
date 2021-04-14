@@ -1,9 +1,9 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24">
+    <div class="container pt-24 mx-auto overflow-x-hidden sm:pxi-0">
       <div class="mx-4 sm:mx-0">
         <h1 class="pb-0 mb-0 text-5xl font-medium">{{ $page.category.title }}</h1>
-        <p class="text-gray-700 text-xl">
+        <p class="text-xl text-gray-700">
           A collection of
           <span
             class="self-center"
@@ -21,7 +21,7 @@
         />
       </div>
 
-      <div class="pagination flex justify-center mb-8">
+      <div class="flex justify-center mb-8 pagination">
         <Pagination
           :baseUrl="$page.category.path"
           :currentPage="$page.category.belongsTo.pageInfo.currentPage"
