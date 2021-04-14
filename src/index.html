@@ -22,25 +22,6 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body ${bodyAttrs}>
-
-    <script v-if="(process.env.SHOW_ANALYTICS == 1)" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-
-    <script v-if="(process.env.SHOW_ANALYTICS == 1)" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-
-    <script v-if="(process.env.SHOW_ANALYTICS == 1)">
-      var firebaseConfig = {
-        apiKey: "AIzaSyCq4xtvd44uGonOUCeBRVx3WfDkUrUBUzg",
-        authDomain: "composerupdate-com.firebaseapp.com",
-        projectId: "composerupdate-com",
-        storageBucket: "composerupdate-com.appspot.com",
-        messagingSenderId: "584137586153",
-        appId: "1:584137586153:web:78fe34d203aacdd7000778",
-        measurementId: "G-Z5V0DJF9BB"
-      };
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-    </script>
-
     <script>
       (function() {
         window.__onThemeChange = function() {};

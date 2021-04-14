@@ -4,7 +4,7 @@
     v-bind:class="{
       'opacity-100': !disableScroll && scrollPosition > headerHeight,
       'opacity-0': !disableScroll && scrollPosition < headerHeight }">
-      <div class="flex items-center flex-grow block w-auto">
+      <div class="flex items-center flex-grow w-auto">
 
         <div class="flex items-center flex-shrink-0 mr-6 text-white">
           <font-awesome :icon="['fas', 'ghost']" class="mr-3"></font-awesome>
