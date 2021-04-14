@@ -1,9 +1,9 @@
 ---
-title: Cunctas non toxea inpatiens in virorum surdaeque
-tags: tag1, tag2, tag3
-category: Health
+title: Como instalar o PHP 8, MySQL e Laravel no Debian 10
+tags: php8, mysql, laravel
+category: Laravel
 excerpt: Saepe Horamque Typhoea in denique, vivere semina manu quodque hic quia et iam natis. Vincere ferociaarva.
-created: 2019-09-03
+created: 2021-04-14
 image: ./images/sergio-souza-mvb51ThjvRA-unsplash.jpg
 image_caption: Photo by Sergio Souza on Unsplash
 author: luizeof
@@ -52,9 +52,13 @@ restabat cumque patent, et nec quam vigore.
 > Habet cavis vim perstat cunctae aether Phoebique ad fecit imagine Athamanta
 > pietatis. Et non lapsa natorum stirpis, Circen traxit erudit; alvo sepulcro.
 
-Novissimus hunc fluminibus ait est tenebras lacertis colorem; has disertum
+Novissimus hunc fluminibus ait est tenebras lacertis colorem;
+
+has disertum
 tollere nymphae fragiles non una pariter pectore haud? Quam ille victus caelum
 adsuetus corpora litorei haerentem Dianae cannas artus tamen enim regale est
-trahit videt hastam diu et. Quam sorori deos partu quoque, iam certe potest
+trahit videt hastam diu et.
+
+Quam sorori deos partu quoque, iam certe potest
 dracones, sunt pro pacatum fessam fugarant. Bene nec passu, ulvaeque mersae
 profundum manes: Oriens me prius cursu!

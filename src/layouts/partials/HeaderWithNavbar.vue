@@ -2,7 +2,7 @@
   <header class="relative bg-black z-1000 bg-radial-t-gray-to-black" id="header">
 
     <nav class="container flex flex-wrap items-center justify-between py-4 mx-auto sm:px-0">
-      <div class="flex items-center flex-grow block w-auto height-30px">
+      <div class="flex items-center flex-grow w-auto height-30px">
         <div class="flex-grow text-sm uppercase">
           <ul class="flex text-gray-300 uppercase list-none justify-left">
             <li
@@ -41,14 +41,12 @@
       </div>
     </nav>
 
-    <div class="container pt-0 pb-16 mx-auto text-white logo md:pb-32 md:pt-16">
+    <div class="container justify-center pt-0 pb-16 mx-auto text-center text-white sm:flex logo md:pb-32 md:pt-16">
 
-      <h2 class="flex content-center m-0 space-x-2 space-y-4 text-5xl">
-        <g-image src="/favicon-96x96.png" class="self-center block object-contain w-16 h-auto" />
+      <h2 class="content-center m-0 space-x-2 space-y-4 text-5xl text-center sm:flex">
+        <g-image src="/favicon-96x96.png" class="self-center block object-contain w-16 h-auto mx-auto" />
         <span class="self-center block text-white">{{ $static.metadata.siteName }}</span>
       </h2>
-
-      <div class="text-xl font-thin text-gray-400">{{ $static.metadata.siteDescription }}</div>
 
     </div>
 

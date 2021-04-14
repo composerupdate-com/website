@@ -6,13 +6,13 @@
       'opacity-0': !disableScroll && scrollPosition < headerHeight }">
       <div class="flex items-center flex-grow w-auto">
 
-        <div class="flex items-center flex-shrink-0 mr-6 text-white">
-          <font-awesome :icon="['fas', 'ghost']" class="mr-3"></font-awesome>
+        <div class="flex flex-wrap items-center content-center flex-shrink-0 mr-6 space-x-1 text-white">
+          <g-image src="/favicon-96x96.png" class="self-center block object-contain w-6 h-auto" />
           <span class="text-xl font-semibold tracking-tight">{{ $static.metadata.siteName }}</span>
         </div>
         <div class="flex-grow text-sm uppercase">
           <ul
-          class="flex text-gray-300 uppercase list-none transition-all justify-left transition-500">
+          class="flex justify-center text-gray-300 uppercase list-none transition-all transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
