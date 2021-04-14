@@ -12,7 +12,7 @@
         </div>
         <div class="flex-grow text-sm uppercase">
           <ul
-          class="flex justify-center text-gray-300 uppercase list-none transition-all transition-500">
+          class="flex text-gray-300 uppercase list-none transition-all transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"

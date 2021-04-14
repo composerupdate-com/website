@@ -3,6 +3,10 @@
 
     <nav class="container flex flex-wrap items-center justify-between py-4 mx-auto sm:px-0">
       <div class="flex items-center flex-grow w-auto height-30px">
+            <div class="flex flex-wrap items-center content-center flex-shrink-0 mr-6 space-x-1 text-white">
+          <g-image src="/favicon-96x96.png" class="self-center block object-contain w-6 h-auto" />
+          <span class="text-xl font-semibold tracking-tight">{{ $static.metadata.siteName }}</span>
+        </div>
         <div class="flex-grow text-sm uppercase">
           <ul class="flex text-gray-300 uppercase list-none justify-left">
             <li
@@ -40,16 +44,6 @@
         </div>
       </div>
     </nav>
-
-    <div class="container justify-center pt-0 pb-16 mx-auto text-center text-white sm:flex logo md:pb-32 md:pt-16">
-
-      <h2 class="content-center m-0 space-x-2 space-y-4 text-5xl text-center sm:flex">
-        <g-image src="/favicon-96x96.png" class="self-center block object-contain w-16 h-auto mx-auto" />
-        <span class="self-center block text-white">{{ $static.metadata.siteName }}</span>
-      </h2>
-
-    </div>
-
   </header>
 </template>
 
