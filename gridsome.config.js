@@ -25,6 +25,24 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/tag/*'],
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5,
+            lastmod: '2020-02-19',
+          },
+          '/sobre': {
+            changefreq: 'monthly',
+            priority: 0.7,
+            lastmod: '2020-05-12',
+          }
+        }
+      }
+    },
+    {
       use: 'gridsome-source-static-meta',
       options: {
         path: 'content/site/*.json'
