@@ -23,6 +23,8 @@ module.exports = {
         shouldTimeTravel: true,
         shouldPurgeUnusedKeyframes: true,
       }
+    }, {
+      use: 'gridsome-plugin-seo'
     },
     {
       use: 'gridsome-plugin-robots-txt',

@@ -21,6 +21,7 @@
     "dotenv": "^6.2.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-robots-txt": "^1.0.2",
+    "gridsome-plugin-seo": "^1.0.1",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
     "lodash": "^4.17.20",
