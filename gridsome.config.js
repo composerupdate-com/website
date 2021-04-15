@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Composer Update',
   siteDescription: 'Dicas e Truques para Desenvolvedores Laravel',
-  siteUrl: 'http://localhost:8080',
+  siteUrl: 'https://composerupdate.com',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
