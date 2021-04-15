@@ -2,6 +2,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VTooltip from 'v-tooltip'
 
 import '~/assets/scss/main.scss';
+import '~/assets/scss/blog-post.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';

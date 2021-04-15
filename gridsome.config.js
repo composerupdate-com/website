@@ -99,6 +99,7 @@ module.exports = {
     remark: {
       plugins: [
         '@noxify/gridsome-remark-table-align',
+        'remark-bracketed-spans',
         ['@noxify/gridsome-remark-classes', {
           'table': 'table table-striped',
           'tableCell[align=center]': 'text-center',

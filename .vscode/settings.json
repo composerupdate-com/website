@@ -7,5 +7,8 @@
     "vetur.format.defaultFormatter.less": "prettier",
     "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
     "vetur.format.defaultFormatter.js": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier"
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

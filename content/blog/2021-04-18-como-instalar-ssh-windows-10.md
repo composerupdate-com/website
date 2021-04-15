@@ -26,13 +26,31 @@ A ferramenta do OpenSSL foi disponibilizada oficialmente no Windows 10 e sendo a
 
 Para instalar o OpenSSH no **Windows 10**:
 
-1. Abra as configurações do Windows;
-2. Acesse Aplicativos;
-3. Depois procure por "Aplicativos e Recursos";
-4. Clique em “Gerenciar Recursos Opcionais”;
-5. Uma lista será carregada, se o OpenSSH não estiver instalado, clique em "Adicionar um recurso";
-6. Localize "Cliente OpenSSH", caso procure deseje instalar o cliente ou "Servidor OpenSSH", para o servidor;
-7. Clique em Instalar.
+#### 1. Abra as configurações do Windows;
+
+#### 2. Acesse Aplicativos;
+
+#### 3. Depois procure por "Aplicativos e Recursos";
+
+#### 4. Clique em “Gerenciar Recursos Opcionais”;
+
+![Gerenciar Recursos Opcionais](./images/cc0a432e-3bf2-422d-8926-0426cccd48e8-01.png)
+
+#### 5. Uma lista será carregada, se o OpenSSH não estiver instalado, clique em "Adicionar um recurso";
+
+![Gerenciar Recursos Opcionais](./images/cd69b170-7da0-4d24-b932-0aecefba6995-02.png)
+
+#### 6. Localize "Cliente OpenSSH", caso procure deseje instalar o cliente ou "Servidor OpenSSH", para o servidor;
+
+![Gerenciar Recursos Opcionais](./images/3dc81c68-421d-406e-afae-323364b8b825-03.png)
+
+#### 7. Clique em Instalar.
+
+![Gerenciar Recursos Opcionais](./images/80a603d4-314c-4e8a-8907-579614f7a4ff-04.png)
+
+#### 8. Setup Concluído
+
+Agora você pode usar o OpenSSH no Windows 10 como faz no Linux / macOS.
 
 ## Instalando o OpenSSH no Windows 10 com PowerShell
 
@@ -56,25 +74,32 @@ Para instalar o **OpenSSH Server no Windows 10**:
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
-
-
 ## Localizando o OpenSSH no Windows 10
 
 Seus arquivos binários estão localizados na pasta **c:\windows\system32\Openssh**.
 
 Além dos aplicativos cliente SSH, a pasta contém as seguintes ferramentas de servidor:
 
-- sftp-server.exe
-- ssh-agent.exe
-- ssh-keygen.exe
-- sshd.exe
+- [sftp-server.exe]{.font-mono}
+- [ssh-agent.exe]{.font-mono}
+- [ssh-keygen.exe]{.font-mono}
+- [sshd.exe]{.font-mono}
 
-É importante observar que o servidor SSH está configurado para funcionar como um serviço, porém você pode iniciar o servço OpenSSH no Windows 10 usando o PowerShell usando os comandos abauixo:
+É importante observar que o servidor SSH está configurado para funcionar como um serviço, porém você pode iniciar o serviço OpenSSH no Windows 10 usando o PowerShell usando os comandos abaixo:
 
 ```bash
 Start-Service sshd
+```
+
+```bash
 Set-Service -Name sshd -StartupType 'Automatic'
+```
+
+```bash
 Get-NetFirewallRule -Name *ssh*
+```
+
+```bash
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 ```
 

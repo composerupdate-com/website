@@ -2,7 +2,8 @@
     "name": "Gridsome Starter",
     "extensions": [
 		"visualstudioexptteam.vscodeintellicode",
-		"octref.vetur"
+		"octref.vetur",
+		"heybourn.headwind"
 	],
     "dockerFile": "Dockerfile",
     "settings": {

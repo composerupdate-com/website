@@ -1,20 +1,6 @@
 @tailwind base;
 
-blockquote {
-  @apply border-l border-l-4 border-l-blue-500 pl-4 italic my-8;
 
-  p {
-    padding: 0 !important;
-  }
-}
-
-pre {
-  @apply border-l border-l-2 border-l-gray-500 pl-4 mt-4 text-base break-words overflow-x-auto;
-}
-
-:not(pre)>code {
-  @apply text-red-600 text-base;
-}
 
 @tailwind components;
 
@@ -22,15 +8,15 @@ pre {
 
 @responsive {
   .pxi-0 {
-    @apply px-0 #{!important};
+    @apply px-0;
   }
 
   .pyi-0 {
-    @apply py-0 #{!important};
+    @apply py-0;
   }
 
   .pi-0 {
-    @apply p-0 #{!important};
+    @apply p-0;
   }
 }
 
@@ -104,7 +90,7 @@ pre {
 }
 
 body[data-theme="dark"] {
-  
+
     background-color: #191b1f;
     @apply text-gray-300;
 
@@ -147,5 +133,5 @@ body[data-theme="dark"] {
         }
       }
     }
-  
+
 }

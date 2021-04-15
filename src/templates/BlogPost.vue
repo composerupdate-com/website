@@ -45,8 +45,8 @@
 
       <div class="px-4 lg:mx-32 md:mx-16 sm:px-0">
 
-        <section class="container relative mx-auto text-gray-700">
-          <article class="py-12 text-xl prose lg:prose-lg" v-html="$page.blog.content"></article>
+        <section id="blog-post-content" class="container relative mx-auto text-gray-700">
+          <article class="py-12 text-xl prose" v-html="$page.blog.content"></article>
         </section>
 
         <section class="container relative py-10 mx-auto post-tags">
