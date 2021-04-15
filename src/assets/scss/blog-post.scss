@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 #blog-post-content {
+
   h2 {
     @apply text-3xl;
   }
@@ -29,6 +30,24 @@
 
   :not(pre) > code {
     @apply text-red-600 text-base;
+  }
+
+  table{
+    @apply border;
+    @apply border-collapse;
+    @apply table-auto;
+  }
+
+  table tr{
+    @apply divide-x;
+    @apply divide-gray-500;
+  }
+
+  table tr td,
+  table tr th {
+    @apply divide-gray-500;
+    @apply divide-x;
+    @apply px-1;
   }
 
 }

@@ -2,15 +2,11 @@
   "social": [
     {
       "icon": "github",
-      "link": "https://github.com"
+      "link": "https://github.com/composerupdate-com"
     },
     {
       "icon": "twitter",
-      "link": "https://twitter.com/"
-    },
-    {
-      "icon": "linkedin",
-      "link": "https://www.linkedin.com"
+      "link": "https://twitter.com/composerupdate"
     }
   ]
 }
