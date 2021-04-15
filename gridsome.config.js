@@ -25,9 +25,28 @@ module.exports = {
       }
     },
     {
+      use: 'gridsome-plugin-robots-txt',
+      options: {
+        host: 'https://composerupdate.com',
+        sitemap: 'https://composerupdate.com/sitemap.xml',
+        policy: [
+          {
+            userAgent: "Googlebot",
+            allow: "/",
+            disallow: "/search"
+          },
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: "/search"
+          }
+        ]
+      }
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/tag/*'],
+        exclude: ['/tags/*', '/category/*'],
         config: {
           '/blog/*': {
             changefreq: 'weekly',
