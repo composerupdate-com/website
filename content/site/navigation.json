@@ -19,6 +19,11 @@
       "name": "VSCode",
       "link": "/category/vscode",
       "external": false
+    },
+    {
+      "name": "Podcast",
+      "link": "https://anchor.fm/composerupdate",
+      "external": true
     }
   ],
   "footerNavigation": [{
