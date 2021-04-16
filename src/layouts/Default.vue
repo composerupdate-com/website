@@ -46,7 +46,6 @@ export default {
     NavbarPartial,
     FooterPartial
   },
-  
   metaInfo: {
     bodyAttrs: {
       class: "m-0"

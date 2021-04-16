@@ -21,7 +21,6 @@ module.exports = function (api) {
 
   api.onCreateNode(options => {
     if (options.internal.typeName === 'Blog') {
-
       options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
       options.author = (typeof options.author === 'string') ? options.author.split(',').map(string => string.trim()) : options.author;
       return {
@@ -44,9 +43,11 @@ module.exports = function (api) {
         edges {
           previous {
             id
+            slug
           }
           next {
             id
+            slug
           }
           node {
             id
@@ -65,7 +66,8 @@ module.exports = function (api) {
         context: {
           previousElement: (element.previous) ? element.previous.id : '##empty##',
           nextElement: (element.next) ? element.next.id : '##empty##',
-          id: element.node.id
+          id: element.node.id,
+          slug: element.node.slug
         }
       });
 
